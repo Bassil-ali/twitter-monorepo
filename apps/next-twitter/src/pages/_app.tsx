@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <SessionProvider session={pageProps.session}>
         <QueryClientProvider client={queryClient}>
-       {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+       <ReactQueryDevtools initialIsOpen={false} />
           <Component {...pageProps} />
         </QueryClientProvider>
       </SessionProvider>
