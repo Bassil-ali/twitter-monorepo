@@ -6,7 +6,7 @@ interface Props {
 
 export default function MainContent({children}:Props) {
     return (
-        <div className="w-3/5  h-screen border border-gray-600 border-t-0">
+        <div className="w-3/5  min-h-screen border border-gray-600 border-t-0">
             <div className="flex">
                 <div className="flex-1 m-2">
                     <h2 className="px-4 py-2 text-xl font-semibold text-white">Home</h2>
