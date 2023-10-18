@@ -72,7 +72,8 @@ export default function LoginForm() {
         return "";
     }
 
-    async function login(data: LoginFormType) {
+    async function login(data: LoginFormType , {setErrors}:any) {
+        setErrors({})
         await mutation.mutateAsync(data);
     }
     return (
