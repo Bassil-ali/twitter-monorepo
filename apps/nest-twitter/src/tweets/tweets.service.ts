@@ -17,6 +17,7 @@ export class TweetsService {
     return await this.tweetRepostory.find({
       relations: {
         user: true,
+        likes:true
       },
       select: {
         user: {
@@ -24,6 +25,9 @@ export class TweetsService {
           name: true,
           username: true,
         },
+        likes: {
+          id:true
+        }
       },
     })
   }

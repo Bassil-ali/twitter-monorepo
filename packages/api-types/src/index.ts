@@ -1,36 +1,36 @@
 export interface AllTweets {
-    id:number;
-    content:string;
-    createdAt:string
-    updatedAt:string
-    user:{
-        id:number
-        name:string
-        username:string
+    id: number;
+    content: string;
+    createdAt: string;
+    updatedAt: string;
+    user: {
+        id: number;
+        name: string;
+        username: string;
     };
 }
 
 export interface CreateTweet {
-    content:string
+    content: string;
 }
 
 export interface authResponse {
-  id:number
-  name: string
-  email: string
-  username: string
-  token: string
+    id: number;
+    name: string;
+    email: string;
+    username: string;
+    token: string;
 }
 
 export interface loginData {
-  username: string
-  password: string
+    username: string;
+    password: string;
 }
 
 export interface RegisterData {
-    name:string
-    email:string
-  username: string
-  password: string
-passwordConfirmation: string
+    name: string;
+    email: string;
+    username: string;
+    password: string;
+    passwordConfirmation: string;
 }
