@@ -33,10 +33,12 @@ export class TweetsService {
   }
 
   async store(data: CreateTweetDto, user: any): Promise<AllTweets> {
-    const tweet = await this.tweetRepostory.save({
+    const tweetClone = this.tweetRepostory.create({
       content: data.content,
       user: user.id,
     })
+
+    const tweet = await this.tweetRepostory.save(tweetClone)
     //@ts-ignore
     return await this.tweetRepostory.findOneOrFail({
       where: {
@@ -72,12 +74,12 @@ export class TweetsService {
     const likedUser = tweet.likes.find(u =>u.id == userId)
 
     if (likedUser) {
-      tweet.likes = []
+      tweet.likes = tweet.likes.filter(user => user.id != userId)
     }
     else {
       const user = await this.userRepository.findOneBy({id:userId})
       if(user) {
-        tweet.likes = [user]
+        tweet.likes = [...tweet.likes , user]
       }
     }
 
