@@ -14,7 +14,7 @@ import { User } from 'src/users/entities/user.entity'
 // import { signUpSchema } from './sign-up.dto'
 import { ZodValidationPipe } from 'nestjs-zod'
 import { AuthGuard } from './auth.guard'
-import { authResponse, loginData } from '@/auth/interfaces/auth.interfaces'
+import {authResponse} from 'api-types'
 
 @Controller('auth')
 export class AuthController {

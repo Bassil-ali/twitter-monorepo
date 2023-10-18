@@ -6,8 +6,9 @@ import { dataSource } from 'src/main'
 import { IsEmail, IsString, min } from 'class-validator'
 import { IsAlreadyRegister } from '@/shared/valdation/CheckUnique.decorator'
 import { Match } from '@/shared/valdation/IsMatch.decorator'
+import { RegisterData } from 'api-types'
 
-export class SignUpDto {
+export class SignUpDto implements RegisterData {
   @IsEmail()
   @IsAlreadyRegister()
   email: string

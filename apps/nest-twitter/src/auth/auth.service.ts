@@ -44,7 +44,7 @@ export class AuthService {
     }
   }
 
-  async login(data: loginData) {
+  async login(data: loginData):Promise<authResponse> {
     const user = await this.userRepository.findOneBy({
       username: data.username,
     })
