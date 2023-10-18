@@ -15,26 +15,31 @@ export class AuthService {
     private jwtService: JwtService,
   ) { }
 
-  async signUp(user: any): Promise<authResponse> {
-    const newUser = await this.userRepository.save({
-      name: user.name,
-      email: user.email,
-      username: await user.username,
-      password: hash(user.password),
+  async signUp(data: any): Promise<authResponse> {
+    const newUser = this.userRepository.create({
+      name: data.name,
+      email: data.email,
+      username: await data.username,
+      password: hash(data.password),
     })
+
+    const user = await this.userRepository.save(newUser)
+    user.id
+
 
     const token = await this.jwtService.signAsync({
       user: {
         name: newUser.name,
-        username: user.username,
-        email: user.email,
+        username: data.username,
+        email: data.email,
       },
     })
 
     return {
+      id:user.id,
       name: newUser.name,
       username: newUser.username,
-      email: user.email,
+      email: data.email,
       token,
     }
   }
@@ -63,6 +68,7 @@ export class AuthService {
     })
 
     return {
+      id:user.id,
       name: user.name,
       username: user.username,
       email: user.email,

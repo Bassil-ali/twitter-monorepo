@@ -1,6 +1,6 @@
 import { BaseEntity } from '@/shared/valdation/entities/BaseEntity'
 import { Tweet } from '@/tweets/entities/tweets.entity'
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, Entity, ManyToMany, OneToMany, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
 export class User extends BaseEntity{
@@ -21,6 +21,9 @@ export class User extends BaseEntity{
 
   @OneToMany(() => Tweet , (Tweet) => Tweet.user  )
   tweets:Tweet[]
+
+  @ManyToMany(() => Tweet , (Tweet) => Tweet.likes , {cascade:true})
+  likes:Tweet[]
 
 
 }

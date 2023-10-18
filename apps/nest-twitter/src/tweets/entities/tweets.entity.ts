@@ -1,7 +1,6 @@
 import { BaseEntity } from '@/shared/valdation/entities/BaseEntity'
 import { User } from '@/users/entities/user.entity'
 import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToOne, PrimaryGeneratedColumn } from 'typeorm'
-import { TweetLike } from './tweet-like'
 
 @Entity()
 export class Tweet extends BaseEntity{
@@ -15,7 +14,7 @@ export class Tweet extends BaseEntity{
   @JoinColumn()
   user:User
 
-  @ManyToMany(() => User , {cascade:true})
+  @ManyToMany(() => User , (User) => User.likes)
   @JoinTable()
-  likes:TweetLike[]
+  likes:User[]
 }

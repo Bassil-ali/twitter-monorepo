@@ -5,14 +5,14 @@ import { Repository } from 'typeorm'
 import { CreateTweetDto } from './dto/create-tweet.dto'
 import { AllTweets } from 'api-types'
 import { User } from '@/users/entities/user.entity'
-import { TweetLike } from './entities/tweet-like'
 
 @Injectable()
 export class TweetsService {
   constructor(
     @InjectRepository(Tweet) private tweetRepostory: Repository<Tweet>,
+    @InjectRepository(User) private userRepository: Repository<User>,
   ) { }
-  async getAll():Promise<AllTweets[]> {
+  async getAll(): Promise<AllTweets[]> {
     //@ts-ignore
     return await this.tweetRepostory.find({
       relations: {
@@ -32,11 +32,11 @@ export class TweetsService {
     const tweet = await this.tweetRepostory.save({
       content: data.content,
       user: user.id,
-    }  )
+    })
     //@ts-ignore
     return await this.tweetRepostory.findOneOrFail({
       where: {
-        id:tweet.id
+        id: tweet.id,
       },
       relations: {
         user: true,
@@ -51,17 +51,32 @@ export class TweetsService {
     })
   }
 
-  async toggleTweetLike(tweetId:number , userId: number) {
-    const tweet = await this.tweetRepostory.findOneBy({id:tweetId})
+  async toggleTweetLike(tweetId: number, userId: number) {
+    const tweet = await this.tweetRepostory.findOne({
+      where: {
+        id: tweetId,
+      },
+      relations: {
+        likes: true,
+      },
+    })
 
-    const a = new TweetLike()
-    // a.user
-
-
-    if(tweet) {
-      // tweet.likes = userId
+    if (!tweet) {
+      return
     }
 
+    const likedUser = tweet.likes.find(u =>u.id == userId)
 
+    if (likedUser) {
+      tweet.likes = []
+    }
+    else {
+      const user = await this.userRepository.findOneBy({id:userId})
+      if(user) {
+        tweet.likes = [user]
+      }
+    }
+
+    await this.tweetRepostory.save(tweet)
   }
 }
