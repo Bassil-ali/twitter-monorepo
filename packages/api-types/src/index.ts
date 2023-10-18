@@ -7,7 +7,10 @@ export interface AllTweets {
         id: number;
         name: string;
         username: string;
-    };
+    }
+    likes: {
+        id:number
+    }[]
 }
 
 export interface CreateTweet {
