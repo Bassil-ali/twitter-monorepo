@@ -52,9 +52,9 @@ export default function Tweet({tweet}:Props) {
                                     <svg
                                         className="text-center h-6 w-6"
                                         fill="none"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
                                     >
@@ -71,9 +71,9 @@ export default function Tweet({tweet}:Props) {
                                     <svg
                                         className="text-center h-7 w-6"
                                         fill="none"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
                                     >
@@ -90,9 +90,9 @@ export default function Tweet({tweet}:Props) {
                                     <svg
                                         className="text-center h-7 w-6"
                                         fill="none"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
                                     >
@@ -109,9 +109,9 @@ export default function Tweet({tweet}:Props) {
                                     <svg
                                         className="text-center h-7 w-6"
                                         fill="none"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
                                     >
@@ -127,9 +127,9 @@ export default function Tweet({tweet}:Props) {
                                     <svg
                                         className="text-center h-7 w-6"
                                         fill="none"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
                                     >
@@ -145,9 +145,9 @@ export default function Tweet({tweet}:Props) {
                                     <svg
                                         className="text-center h-7 w-6"
                                         fill="none"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
                                     >

@@ -6,7 +6,7 @@ interface Props {
 
 export default function MainContent({children}:Props) {
     return (
-        <div className="w-3/5 border border-gray-600 h-auto  border-t-0">
+        <div className="w-3/5  h-screen border border-gray-600 border-t-0">
             <div className="flex">
                 <div className="flex-1 m-2">
                     <h2 className="px-4 py-2 text-xl font-semibold text-white">Home</h2>
@@ -85,9 +85,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-6 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}
@@ -104,9 +104,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-7 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}
@@ -123,9 +123,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-7 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}
@@ -142,9 +142,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-7 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}
@@ -160,9 +160,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-7 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}
@@ -178,9 +178,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-7 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}
@@ -236,9 +236,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-6 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}
@@ -255,9 +255,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-7 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}
@@ -274,9 +274,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-7 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}
@@ -293,9 +293,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-7 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}
@@ -311,9 +311,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-7 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}
@@ -329,9 +329,9 @@ export default function MainContent({children}:Props) {
             {/*                         <svg */}
             {/*                             className="text-center h-7 w-6" */}
             {/*                             fill="none" */}
-            {/*                             stroke-linecap="round" */}
-            {/*                             stroke-linejoin="round" */}
-            {/*                             stroke-width="2" */}
+            {/*                             strokeLinecap="round" */}
+            {/*                             strokeLinejoin="round" */}
+            {/*                             strokeWidth="2" */}
             {/*                             stroke="currentColor" */}
             {/*                             viewBox="0 0 24 24" */}
             {/*                         > */}

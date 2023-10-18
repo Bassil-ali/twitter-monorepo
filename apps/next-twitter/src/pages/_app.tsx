@@ -12,8 +12,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <SessionProvider session={pageProps.session}>
         <QueryClientProvider client={queryClient}>
-       <ReactQueryDevtools initialIsOpen={false} />
           <Component {...pageProps} />
+          {/* <ReactQueryDevtools  /> */}
         </QueryClientProvider>
       </SessionProvider>
     </>
