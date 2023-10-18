@@ -1,7 +1,7 @@
 export default function RightSide() {
     return (
 
-        <div className="w-2/5 h-12">
+        <div className="w-2/5 h-12 static min-h-screen">
 
           <div className="relative text-gray-300 w-80 p-5 pb-0 mr-16">
             <button type="submit" className="absolute ml-4 mt-3 mr-4">
