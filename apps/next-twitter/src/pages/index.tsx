@@ -68,7 +68,7 @@ export default function Home() {
             )}
             {query.status === 'success' && query.data.map(tweet => {
               return (
-                <Tweet tweet={tweet} />
+                <Tweet key={tweet.id} tweet={tweet} />
               )
             })}
             </MainContent>

@@ -59,7 +59,7 @@ export default function Tweet({tweet}:Props) {
                             </div>
 
                             <div className="flex-1 text-center py-2 m-2">
-                                <LikeIcon />
+                                <LikeIcon tweetId={tweet.id}  />
                             </div>
 
                             <div className="flex-1 text-center py-2 m-2">
