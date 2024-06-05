@@ -1,10 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import {registerDecorator, ValidationArguments, ValidationOptions, ValidatorConstraint, ValidatorConstraintInterface} from 'class-validator';
+import { registerDecorator, ValidationArguments, ValidationOptions, ValidatorConstraint, ValidatorConstraintInterface } from 'class-validator';
 
+// Custom validation decorator factory function
 export function Match(property: string, validationOptions?: ValidationOptions) {
-    return (object: any, propertyName: string) => {
+    return (target: any, propertyName: string) => {
         registerDecorator({
-            target: object.constructor,
+            target: target.constructor,
             propertyName,
             options: validationOptions,
             constraints: [property],
@@ -13,19 +14,18 @@ export function Match(property: string, validationOptions?: ValidationOptions) {
     };
 }
 
+// Validator constraint implementing the validation logic
 @Injectable()
-@ValidatorConstraint({name: 'Match'})
+@ValidatorConstraint({ name: 'Match' })
 export class MatchConstraint implements ValidatorConstraintInterface {
 
-    validate(value: any, args: ValidationArguments) {
+    validate(value: any, args: ValidationArguments): boolean {
         const [relatedPropertyName] = args.constraints;
-        const relatedValue = (args.object as any)[relatedPropertyName];
+        const relatedValue = args.object[relatedPropertyName];
         return value === relatedValue;
     }
 
     defaultMessage(): string {
-        return 'Passwords do not match'
+        return 'Passwords do not match';
     }
-
-
 }
